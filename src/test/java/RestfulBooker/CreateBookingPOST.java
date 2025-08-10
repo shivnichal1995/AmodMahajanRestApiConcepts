@@ -21,6 +21,5 @@ public class CreateBookingPOST {
                 "    \"additionalneeds\" : \"Breakfast\"\n" +
                 "}").post().then().log().all();
 
-        //4089
     }
 }
