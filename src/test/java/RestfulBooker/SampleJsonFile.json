@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "John",
+    "skills": ["Java", "Selenium"]
+  },
+  {
+    "id": 2,
+    "name": "Alice",
+    "skills": ["Python", "RestAssured"]
+  },
+  {
+    "id": 2,
+    "name": "Tony",
+    "skills": ["Python", "BA"]
+  },
+  {
+    "id": 3,
+    "name": "Natasha",
+    "skills": ["Power BI", "API Testing"]
+  },
+  {
+    "id": 4,
+    "name": "Bruce",
+    "skills": ["SQL", "API Testing"]
+  }
+]

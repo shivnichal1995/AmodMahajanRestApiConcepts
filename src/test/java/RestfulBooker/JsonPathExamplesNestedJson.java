@@ -2,15 +2,15 @@ package RestfulBooker;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.hamcrest.Matchers;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class CreateBookingPOST {
+public class JsonPathExamplesNestedJson {
     RequestSpecification requestSpecification;
 
     @BeforeClass
@@ -33,15 +33,11 @@ public class CreateBookingPOST {
         ResponseSpecification responseSpecification = RestAssured.expect().
                 statusCode(200).contentType(ContentType.JSON).time(Matchers.lessThan(5000L));
 
-        RestAssured.given(requestSpecification, responseSpecification)
-                .post().then().log().all();
+        Response response = RestAssured.given(requestSpecification, responseSpecification)
+                .post();
+
+        System.out.println("response as string --> " + response.asPrettyString());
+
 
     }
-
-    /*
-    If we don’t provide a URI value, the RestAssured class uses its default variables, which set the values as shown below:
-    public static final String DEFAULT_URI = "http://localhost";
-    public static final String DEFAULT_BODY_ROOT_PATH = "";
-    public static final int DEFAULT_PORT = 8080;
-    * */
 }

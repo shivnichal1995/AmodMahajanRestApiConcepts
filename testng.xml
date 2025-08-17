@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:\Users\shivprasad\IdeaProjects\AmodMahajanApiTestingFW\src\test\java\ReqResApis\CreateUserAPITest.java">
+        <classes>
+            <class name="RestfulBooker.CreateBookingPOST">
+                <methods>
+                    <include name="createBooking"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
